@@ -123,6 +123,7 @@ section{padding-block:clamp(64px,10vw,120px);border-top:1px solid var(--line)}
 .pack .was{color:var(--muted);font-size:14px}
 .pack ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.5}
 .pack li::before{content:"✓";color:var(--cardamom);font-weight:700;margin-inline-end:10px}
+.pack li a{color:var(--saffron);text-decoration:none;font-weight:700}
 .pack .btn{justify-content:center;margin-top:6px}
 .badge-top{font-family:var(--f-en);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--saffron);direction:ltr;align-self:flex-start}
 .terms{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
@@ -162,6 +163,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .offer-strip .btn{padding:12px 18px;font-size:15px}
 .pack li.star::before{content:"★";color:var(--saffron)}
 .star-note{margin-top:22px;font-size:14px;color:var(--muted)}
+.six{border:1px solid var(--line);border-radius:var(--r-badge);background:var(--raised);padding:22px 22px 18px;margin-bottom:28px}
+.six h3{font-size:20px;font-weight:800;display:flex;align-items:center;gap:8px}
+.six h3 .st{color:var(--saffron)}
+.six p{color:var(--muted);font-size:14px;margin-top:4px}
+.six-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.six-grid a{display:flex;flex-direction:column;gap:2px;text-decoration:none;border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;background:var(--surface)}
+.six-grid a:hover{border-color:var(--saffron)}
+.six-grid b{font-family:var(--f-dar);font-size:16px;font-weight:700}
+.six-grid b i{font-style:normal;color:var(--saffron);margin-inline-end:6px}
+.six-grid small{color:var(--muted);font-size:13px;line-height:1.5}
+@media (max-width:700px){.six-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .star-note .st{color:var(--saffron)}
 button.player{font:inherit;color:inherit;text-align:right;cursor:pointer;width:auto}
 button.player:hover{border-color:var(--saffron)}
@@ -272,7 +284,7 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <div class="hero-copy">
 <span class="label">Café ID Studio · Sound · Image · Motion</span>
 <h1>هويتك لها طعم…<span class="l2">خلّه ينشاف</span></h1>
-<p class="lead">نصنع لمقهاك صوتاً وصورة وحركة: أغنية باسم مقهاك، ريلز وموشن، ومنيو يحكي. تبعث لنا صور جوالك، ونسلّمك محتوى جاهز للنشر.</p>
+<p class="lead">نصنع لمقهاك صوتاً وصورة وحركة: أغنية وكليب احترافي باسم مقهاك، ريلز وموشن، ومنيو يحكي. تبعث لنا صور جوالك، ونسلّمك محتوى جاهز للنشر.</p>
 <div class="hero-ctas">
 <a class="btn btn-primary wa" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>راسلنا واتساب</a>
 <a class="btn" href="#packages">شوف الباقات</a>
@@ -352,8 +364,8 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <div class="phonef"><img src="img/espresso-reel.jpg" alt="كليب أغنية مقهى سَنا">
 <div class="lyric" aria-hidden="true"><span class="lk">♪ سَنا · Concept</span><p>قل لي وش تبي؟<br>سَنا عندها الجواب</p><p class="dim">سبانش، موكا، V60…<br>كل كوب له حساب</p><span class="lsoon">الكليب قريباً</span></div>
 </div>
-<div class="frame-tag"><strong>أغنية مقهاك</strong><span class="concept">Concept</span></div>
-<p class="wdesc">أغنية كاملة كلماتها من قصة مقهاك، بصوت خليجي، مع كليب يصير توقيعك بكل ريلز وستوري. النموذج لمقهى «سَنا» المفاهيمي.</p>
+<div class="frame-tag"><strong>أغنية وكليب مقهاك</strong><span class="concept">Concept</span></div>
+<p class="wdesc">أغنية أصلية باسم مقهاك مع فيديو كليب احترافي: قصة، تصوير سينمائي، ومونتاج على الإيقاع. يصير توقيعك بكل ريلز وستوري. النموذج لمقهى «سَنا» المفاهيمي.</p>
 </div>
 <div class="w w2">
 <div class="phonef"><img src="img/saffron-story.jpg" alt="ستوري قصة لاتيه الزعفران">
@@ -399,8 +411,8 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <span class="label">Sound</span><h3>صوت</h3>
 <div class="motif wave" aria-hidden="true"><b style="height:14px"></b><b style="height:26px"></b><b style="height:40px"></b><b style="height:52px"></b><b style="height:30px"></b><b style="height:58px"></b><b style="height:44px"></b><b style="height:62px"></b><b style="height:34px"></b><b style="height:50px"></b><b style="height:24px"></b><b style="height:40px"></b><b style="height:56px"></b><b style="height:30px"></b><b style="height:18px"></b><b style="height:44px"></b><b style="height:26px"></b><b style="height:14px"></b></div>
 <div class="svc">
-<div><strong>أغنية مقهاك</strong><span>2499 ر.س</span></div>
-<p>نسمع قصة مقهاك، نكتب الكلمات، نلحّن ونسجّل بصوت خليجي، ونصوّر كليب 9:16. تستلم الأغنية كاملة، ونسخة 30 ثانية، وتوقيع 5 ثواني، والكلمات مكتوبة.</p>
+<div><strong>أغنية + كليب احترافي</strong><span>2499 ر.س</span></div>
+<p>أغنية أصلية كلماتها من قصة مقهاك، بصوت خليجي ولحن خاص فيك، مع <b style="color:var(--ink)">فيديو كليب احترافي</b>: قصة بشخصيات وتصوير سينمائي، ألوان ومونتاج على الإيقاع، والكلمات مكتوبة على الشاشة. تستلم الكليب الكامل 9:16، ونسخة 30 ثانية للإعلانات، وتوقيع صوتي 5 ثواني.</p>
 <div><strong>المنيو الناطق</strong><span>1499 ر.س</span></div>
 <p>QR على الطاولة، وكل مشروب يعرّف عن نفسه بفيديو قصير بالعربي والإنجليزي.</p>
 </div>
@@ -432,6 +444,15 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <div class="wrap">
 <div class="sec-head"><span class="label">Packages</span><h2>اختر باقتك</h2><p class="lead">الأسعار بالريال السعودي. التزام ثلاثة أشهر بالباقة الشهرية = خصم 10%.</p></div>
 <div class="offer-strip"><span class="pct">-30%</span><span>لأول 5 مقاهي بس: خصم على أي باقة، مقابل رأيك وإذن نعرض شغلك.</span><a class="btn btn-primary wa" href="#contact" data-msg="أبغى خصم أول 5 مقاهي">احجز مكانك</a></div>
+<div class="six" id="six"><h3><span class="st">★</span> الخدمات المميزة الست</h3><p>بالباقات الشهرية تختار منها كل شهر حسب باقتك، وكلها موجودة كاملة بباقة «هوية الكافيه الكاملة».</p>
+<div class="six-grid">
+<a href="#work"><b><i>♪</i>أغنية وكليب مقهاك</b><small>أغنية أصلية باسمك + فيديو كليب احترافي</small></a>
+<a href="#work"><b><i>▣</i>المنيو الناطق</b><small>QR يفتح فيديو لكل مشروب</small></a>
+<a href="#work"><b><i>⌂</i>الكافيه المصغّر</b><small>مجسّم مقهاك بصورة وفيديو</small></a>
+<a href="#work"><b><i>★</i>أسطورة المشروب</b><small>قصة وشخصية لأشهر مشروب</small></a>
+<a href="#work"><b><i>▶</i>فيديو موشن / ستوب موشن</b><small>فيديو تعريفي يتحرك على الإيقاع</small></a>
+<a href="#services"><b><i>▤</i>منيو متحرك للشاشات</b><small>منيو وأسعار على تلفزيون المقهى</small></a>
+</div></div>
 <div class="tabs" role="tablist" aria-label="نوع الباقة">
 <button type="button" role="tab" id="t-m" aria-selected="true" aria-controls="p-m">شهرية</button>
 <button type="button" role="tab" id="t-o" aria-selected="false" aria-controls="p-o">مرة وحدة</button>
@@ -441,10 +462,10 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <ul><li>8 صور مشروبات احترافية</li><li>4 ريلز بتعليق صوتي سعودي</li><li>4 تصاميم ستوري</li></ul>
 <a class="btn wa" href="#contact" data-msg="أبغى الباقة الأساسية">اطلب الأساسية</a></div>
 <div class="pack feat"><span class="badge-top">Most chosen</span><h3>النمو</h3><div class="price">1299 <small>ر.س / شهر</small></div>
-<ul><li>12 صورة مشروبات احترافية</li><li>8 ريلز بتعليق صوتي سعودي</li><li>8 تصاميم ستوري</li><li>4 كاروسيل</li><li class="star">قطعة مميزة كل شهر من الست</li><li>كابشن جاهز ومحتوى المواسم</li></ul>
+<ul><li>12 صورة مشروبات احترافية</li><li>8 ريلز بتعليق صوتي سعودي</li><li>8 تصاميم ستوري</li><li>4 كاروسيل</li><li class="star">خدمة مميزة وحدة كل شهر تختارها من <a href="#six">الست ↑</a></li><li>كابشن جاهز ومحتوى المواسم</li></ul>
 <a class="btn btn-primary wa" href="#contact" data-msg="أبغى باقة النمو">اطلب النمو</a></div>
 <div class="pack"><h3>المميزة</h3><div class="price">1999 <small>ر.س / شهر</small></div>
-<ul><li>16 صورة مشروبات احترافية</li><li>12 ريلز بتعليق صوتي سعودي</li><li>12 تصميم ستوري</li><li>6 كاروسيل</li><li class="star">قطعتين مميزتين كل شهر من الست</li><li>تحديث المنيو الناطق والمتحرك</li><li class="star">توقيع صوتي من أغنية مقهاك مجاناً مع التزام 3 أشهر</li><li>كابشن جاهز ومحتوى المواسم</li></ul>
+<ul><li>16 صورة مشروبات احترافية</li><li>12 ريلز بتعليق صوتي سعودي</li><li>12 تصميم ستوري</li><li>6 كاروسيل</li><li class="star">خدمتين مميزتين كل شهر تختارهم من <a href="#six">الست ↑</a></li><li>تحديث المنيو الناطق والمتحرك</li><li class="star">توقيع صوتي (5 ثواني) من أغنية مقهاك مجاناً مع التزام 3 أشهر</li><li>كابشن جاهز ومحتوى المواسم</li></ul>
 <a class="btn wa" href="#contact" data-msg="أبغى الباقة المميزة">اطلب المميزة</a></div>
 </div>
 <div class="packs two" id="p-o" role="tabpanel" aria-labelledby="t-o" hidden>
@@ -452,10 +473,10 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <ul><li class="star">الكافيه المصغّر</li><li class="star">فيديو موشن عدّ تنازلي للافتتاح</li><li class="star">منيو متحرك للشاشات</li><li>10 صور مشروبات</li><li>4 فيديوهات تشويق</li><li>6 تصاميم ستوري للافتتاح</li></ul>
 <a class="btn wa" href="#contact" data-msg="أبغى باقة الافتتاح">اطلب باقة الافتتاح</a></div>
 <div class="pack feat"><span class="badge-top">Full identity</span><h3>هوية الكافيه الكاملة</h3><div class="price">3999 <small>ر.س</small></div><span class="was">بدلاً من 6894 ر.س لو منفردة</span>
-<ul><li class="star">أغنية مقهاك مع الكليب</li><li class="star">المنيو الناطق</li><li class="star">الكافيه المصغّر</li><li class="star">أسطورة أشهر مشروب</li><li class="star">فيديو موشن تعريفي</li><li class="star">منيو متحرك للشاشات</li></ul>
+<ul><li class="star">أغنية مقهاك + فيديو كليب احترافي</li><li class="star">المنيو الناطق</li><li class="star">الكافيه المصغّر</li><li class="star">أسطورة أشهر مشروب</li><li class="star">فيديو موشن تعريفي</li><li class="star">منيو متحرك للشاشات</li></ul>
 <a class="btn btn-primary wa" href="#contact" data-msg="أبغى باقة الهوية الكاملة">اطلب الهوية الكاملة</a></div>
 </div>
-<p class="star-note"><span class="st">★</span> من الخدمات المميزة الست: أغنية مقهاك، المنيو الناطق، الكافيه المصغّر، أسطورة المشروب، فيديو موشن، منيو متحرك.</p>
+<p class="star-note"><span class="st">★</span> = من الخدمات المميزة الست فوق.</p>
 <div class="terms"><span class="chip">تعديلين لكل عمل</span><span class="chip">تسليم على دفعتين بالشهر</span><span class="chip">النشر عليك، والإنتاج علينا</span><span class="chip">الدفع برابط آمن</span></div>
 </div>
 </section>
