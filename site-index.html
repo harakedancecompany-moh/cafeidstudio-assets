@@ -155,7 +155,9 @@ details p{color:var(--muted);margin-top:10px;font-size:16px}
 .contact{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
 .num{font-family:var(--f-en);direction:ltr;color:var(--muted);font-size:15px;user-select:all}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+@media (max-width:700px){footer .wrap{flex-direction:column;align-items:center;text-align:center;gap:6px}}
+.final .lead{text-wrap:balance}
 [hidden]{display:none!important}
 .offer-strip{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;border:1.5px solid var(--saffron);background:var(--saffron-soft);border-radius:var(--r-badge);padding:16px 22px;margin-bottom:28px}
 .offer-strip .pct{font-family:var(--f-en);font-weight:700;font-size:34px;color:var(--saffron);direction:ltr;line-height:1}
