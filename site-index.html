@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Café ID Studio · كافيه آي دي ستوديو</title>
+<meta name="description" content="هويتك لها طعم… خلّه ينشاف. صوت وصورة وحركة للمقاهي: أغنية مقهاك، منيو ناطق، ريلز وموشن.">
+<meta name="theme-color" content="#0F0A07">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://cafeidstudio.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cafeidstudio.com/">
+<meta property="og:title" content="Café ID Studio · هويتك لها طعم… خلّه ينشاف">
+<meta property="og:description" content="صوت وصورة وحركة للمقاهي. تبعث لنا صور جوالك، ونسلّمك محتوى جاهز للنشر.">
+<meta property="og:image" content="https://cafeidstudio.com/media/cafeid-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700;800&family=Tajawal:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@800&display=swap">
+<style>
+:root{
+color-scheme:dark;
+--surface:#0F0A07; --raised:#1A120D; --line:#3A2B1F;
+--ink:#F2EADF; --muted:#A89886;
+--saffron:#E8912D; --saffron-soft:#3A2410; --on-saffron:#0F0A07;
+--gold:#D9A866; --cardamom:#7FA88C; --cardamom-soft:#1C2A21; --rec:#E0483B;
+--f-dar:"Alexandria","Tajawal",system-ui,sans-serif;
+--f-tar:"Tajawal","Alexandria",system-ui,sans-serif;
+--f-en:"Space Grotesk",system-ui,sans-serif;
+--f-en2:"Syne","Space Grotesk",system-ui,sans-serif;
+--r-sm:6px; --r-md:12px; --r-badge:28px; --r-pill:999px;
+--glow:0 0 40px rgba(232,145,45,.35);
+--gut:clamp(16px,5vw,56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--f-tar);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin-inline:auto;padding-inline:var(--gut)}
+.en{font-family:var(--f-en);direction:ltr;unicode-bidi:isolate}
+.label{font-family:var(--f-en);font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);direction:ltr;unicode-bidi:isolate}
+.accent{color:var(--saffron)}
+h1,h2,h3{font-family:var(--f-dar);margin:0;line-height:1.35;text-wrap:balance}
+h2{font-size:clamp(32px,5vw,52px);font-weight:800}
+p{margin:0}
+.lead{color:var(--muted);max-width:34em}
+section{padding-block:clamp(64px,10vw,120px);border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(32px,5vw,56px)}
+.btn{font-family:var(--f-tar);font-weight:700;font-size:17px;line-height:1;padding:16px 26px;border-radius:var(--r-md);border:1.5px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:10px;cursor:pointer;transition:transform .2s,border-color .2s}
+.btn:hover{border-color:var(--muted)}
+.btn-primary{background:var(--saffron);border-color:var(--saffron);color:var(--on-saffron);box-shadow:var(--glow)}
+.btn-primary:hover{transform:translateY(-2px);border-color:var(--saffron)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+.btn svg{width:20px;height:20px;flex:none}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(15,10,7,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.top-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.top-logo svg{height:40px;width:auto}
+.top nav{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--ink)}
+.top .btn{padding:11px 16px;font-size:15px}
+@media (max-width:760px){.top nav{display:none}}
+.hero{border-top:0;padding-block:clamp(40px,7vw,96px) clamp(56px,8vw,110px);position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,80px);align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1{font-size:clamp(44px,7.4vw,92px);font-weight:800;line-height:1.3}
+.hero h1 .l2{display:block;color:var(--saffron);margin-top:.18em}
+.hero .lead{font-size:clamp(17px,1.8vw,20px)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:8px}
+.phone{position:relative;justify-self:center;width:min(100%,340px);aspect-ratio:9/16;border-radius:34px;border:1.5px solid var(--line);background:#000;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone .sound{position:absolute;bottom:14px;inset-inline-start:14px;font-family:var(--f-tar);font-size:13px;font-weight:700;background:rgba(15,10,7,.75);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 12px;cursor:pointer}
+.hud{position:absolute;inset:-18px;pointer-events:none}
+.hud i{position:absolute;width:26px;height:26px;border:0 solid var(--muted)}
+.hud .a{top:0;left:0;border-top-width:1.5px;border-left-width:1.5px}
+.hud .b{top:0;right:0;border-top-width:1.5px;border-right-width:1.5px}
+.hud .c{bottom:0;left:0;border-bottom-width:1.5px;border-left-width:1.5px}
+.hud .d{bottom:0;right:0;border-bottom-width:1.5px;border-right-width:1.5px}
+.rec{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rec);margin-inline-start:6px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.phone{width:min(78vw,320px)}}
+.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.stat{font-family:var(--f-en);font-weight:700;font-size:clamp(56px,9vw,112px);line-height:1;letter-spacing:-.02em;direction:ltr;text-align:right;font-variant-numeric:tabular-nums}
+.mosaic{display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+.mosaic span{aspect-ratio:2/3;border-radius:6px;background:#2a221c}
+.mosaic span.on{background:var(--saffron);box-shadow:var(--glow)}
+@media (max-width:760px){.problem .wrap{grid-template-columns:1fr}}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pillar{border:1px solid var(--line);border-radius:var(--r-badge);padding:28px;display:flex;flex-direction:column;gap:18px;background:var(--raised);min-width:0}
+.pillar h3{font-size:30px;font-weight:800}
+.pillar .motif{height:64px;display:flex;align-items:center;gap:4px}
+.wave b{display:block;width:6px;border-radius:3px;background:var(--gold)}
+.svc{display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--line);padding-top:16px}
+.svc div{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.svc strong{font-family:var(--f-dar);font-weight:700;font-size:18px}
+.svc span{color:var(--muted);font-size:15px;white-space:nowrap}
+.svc p{color:var(--muted);font-size:15px;line-height:1.6}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{padding:28px 0 0;border-top:2px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.step .n{font-family:var(--f-en);font-size:14px;letter-spacing:.2em;color:var(--muted);direction:ltr;text-align:right}
+.step h3{font-size:24px;font-weight:700}
+.step p{color:var(--muted);font-size:16px}
+.step.hi{border-top-color:var(--saffron)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:var(--r-pill);padding:4px;gap:4px;margin-bottom:28px}
+.tabs button{font-family:var(--f-tar);font-weight:700;font-size:15px;border:0;background:transparent;color:var(--muted);padding:10px 18px;border-radius:var(--r-pill);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--surface)}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.packs.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+.pack{position:relative;border:1.5px solid var(--line);border-radius:var(--r-badge);background:var(--raised);padding:40px 28px 28px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.pack::before{content:"";position:absolute;top:14px;left:50%;width:52px;height:10px;margin-left:-26px;border-radius:var(--r-pill);border:1.5px solid var(--line)}
+.pack.feat{border-color:var(--saffron);background:var(--saffron-soft);box-shadow:var(--glow)}
+.pack.feat::before{border-color:var(--saffron)}
+.pack h3{font-size:26px;font-weight:700}
+.pack .price{font-family:var(--f-dar);font-weight:800;font-size:44px;line-height:1}
+.pack.feat .price{color:var(--saffron)}
+.pack .price small{font-family:var(--f-tar);font-weight:500;font-size:15px;color:var(--muted)}
+.pack .was{color:var(--muted);font-size:14px}
+.pack ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.5}
+.pack li::before{content:"✓";color:var(--cardamom);font-weight:700;margin-inline-end:10px}
+.pack .btn{justify-content:center;margin-top:6px}
+.badge-top{font-family:var(--f-en);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--saffron);direction:ltr;align-self:flex-start}
+.terms{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-size:14px;padding:6px 14px;border-radius:var(--r-pill);background:var(--cardamom-soft);color:var(--cardamom)}
+@media (max-width:900px){.packs,.packs.two{grid-template-columns:1fr;max-width:460px}}
+.offer .box{border:1.5px solid var(--saffron);border-radius:var(--r-badge);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(20px,4vw,48px);align-items:center;background:linear-gradient(0deg,var(--saffron-soft),var(--saffron-soft))}
+.offer .pct{font-family:var(--f-en);font-weight:700;font-size:clamp(64px,10vw,120px);line-height:.9;color:var(--saffron);direction:ltr}
+.offer h2{font-size:clamp(26px,3.6vw,38px)}
+@media (max-width:860px){.offer .box{grid-template-columns:1fr}}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,80px)}
+.why ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.why li{display:grid;grid-template-columns:auto 1fr;gap:18px;padding-block:18px;border-bottom:1px solid var(--line)}
+.why li b{font-family:var(--f-dar);font-size:20px;font-weight:700;display:block}
+.why li p{color:var(--muted);font-size:16px}
+.why li .k{font-family:var(--f-en);color:var(--muted);font-size:13px;letter-spacing:.2em;padding-top:5px;direction:ltr}
+.route{font-family:var(--f-en2);font-weight:800;font-size:clamp(40px,6vw,76px);line-height:1;direction:ltr;text-align:right}
+.route span{display:block}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}}
+.faq .wrap{max-width:860px}
+details{border-bottom:1px solid var(--line);padding-block:18px}
+summary{font-family:var(--f-dar);font-weight:700;font-size:20px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--f-en);color:var(--muted);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;font-size:16px}
+.final{text-align:center}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+.final h2{font-size:clamp(40px,7vw,84px);line-height:1.45}
+.contact{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+.num{font-family:var(--f-en);direction:ltr;color:var(--muted);font-size:15px;user-select:all}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+[hidden]{display:none!important}
+.offer-strip{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;border:1.5px solid var(--saffron);background:var(--saffron-soft);border-radius:var(--r-badge);padding:16px 22px;margin-bottom:28px}
+.offer-strip .pct{font-family:var(--f-en);font-weight:700;font-size:34px;color:var(--saffron);direction:ltr;line-height:1}
+.offer-strip span:nth-child(2){flex:1;min-width:220px;font-size:16px}
+.offer-strip .btn{padding:12px 18px;font-size:15px}
+.pack li.star::before{content:"★";color:var(--saffron)}
+.star-note{margin-top:22px;font-size:14px;color:var(--muted)}
+.star-note .st{color:var(--saffron)}
+button.player{font:inherit;color:inherit;text-align:right;cursor:pointer;width:auto}
+button.player:hover{border-color:var(--saffron)}
+button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.player .i-pause{display:none}.player.on .i-play{display:none}.player.on .i-pause{display:block}
+.player .eq b{animation-play-state:paused}.player.on .eq b{animation-play-state:running}
+.player:not(.on){animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(232,145,45,.18)}}
+.wdesc{margin-top:6px;font-size:15px;line-height:1.65;color:var(--muted)}
+.frame-tag{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px}
+.frame-tag strong{font-family:var(--f-dar);font-weight:700;font-size:17px}
+.concept{font-family:var(--f-en);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:var(--r-pill);padding:3px 9px;direction:ltr;white-space:nowrap}
+.diff .wrap{display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
+.ba-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.ba{position:relative;width:100%;max-width:560px;aspect-ratio:1;border-radius:var(--r-badge);overflow:hidden;border:1.5px solid var(--line);justify-self:center;touch-action:pan-y;--p:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none}
+.ba .after{clip-path:inset(0 0 0 var(--p))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--saffron);box-shadow:var(--glow);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--p);width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:var(--saffron);color:var(--on-saffron);display:grid;place-items:center;font-family:var(--f-en);font-weight:700;font-size:18px;pointer-events:none;box-shadow:var(--glow)}
+.ba .tagl,.ba .tagr{position:absolute;top:16px;font-family:var(--f-tar);font-weight:700;font-size:14px;padding:6px 12px;border-radius:var(--r-pill);background:rgba(15,10,7,.78);border:1px solid var(--line)}
+.ba .tagl{left:16px}.ba .tagr{right:16px;color:var(--saffron);border-color:var(--saffron)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-copy{display:flex;flex-direction:column;gap:16px;min-width:0}
+.ba-copy h3{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.ba-copy ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ba-copy li{display:grid;grid-template-columns:70px 1fr;gap:12px;font-size:16px;color:var(--muted)}
+.ba-copy li b{font-family:var(--f-en);color:var(--ink);font-weight:500;letter-spacing:.14em;font-size:12px;text-transform:uppercase;padding-top:4px;direction:ltr}
+.grids{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(16px,3vw,40px);align-items:center}
+.gphone{width:100%;max-width:340px;justify-self:center;border:1.5px solid var(--line);border-radius:34px;padding:14px 10px 18px;background:#080605}
+.gphone .ghead{display:flex;align-items:center;gap:10px;padding:6px 8px 12px;direction:rtl}
+.gphone .av{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--f-en);font-weight:700;font-size:12px}
+.gphone .gname{font-family:var(--f-tar);font-weight:700;font-size:14px;line-height:1.3}
+.gphone .gname small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.ggrid>*{aspect-ratio:1;overflow:hidden;position:relative;background:#222}
+.ggrid img{width:100%;height:100%;object-fit:cover;display:block}
+.g-before .ggrid img{filter:saturate(.55) brightness(.92) contrast(.9)}
+.g-before .av{background:#3a3a3a;color:#bbb}
+.g-after{border-color:var(--saffron);box-shadow:var(--glow)}
+.g-after .av{background:var(--surface);border:1.5px solid var(--saffron);color:var(--ink)}
+.t-type{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;background:var(--raised);font-family:var(--f-dar);font-weight:800;font-size:clamp(11px,1.5vw,15px);line-height:1.35;direction:rtl}
+.t-type.sf{background:var(--saffron);color:var(--on-saffron)}
+.t-type .mini-wave{display:flex;gap:2px;align-items:center;height:18px;margin-top:6px}
+.t-type .mini-wave b{width:3px;border-radius:2px;background:var(--saffron);height:calc(var(--h)*.18px)}
+.g-label{text-align:center;margin-top:14px;font-family:var(--f-dar);font-weight:700;font-size:16px}
+.g-label.hot{color:var(--saffron)}
+.arrow{font-family:var(--f-en);font-size:40px;color:var(--saffron);text-align:center}
+@media (max-width:860px){.ba-row{grid-template-columns:1fr}.grids{grid-template-columns:1fr}.arrow{transform:rotate(-90deg)}}
+.work-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.w{min-width:0;display:flex;flex-direction:column}
+.w1{grid-column:span 4}.w2{grid-column:span 4}.w3{grid-column:span 4}.w4{grid-column:span 5}.w5{grid-column:span 7}
+.phonef{position:relative;aspect-ratio:9/16;border-radius:30px;overflow:hidden;border:1.5px solid var(--line);background:#000}
+.phonef>img{width:100%;height:100%;object-fit:cover;display:block}
+.postf{position:relative;aspect-ratio:1;border-radius:var(--r-badge);overflow:hidden;border:1.5px solid var(--line)}
+.postf>img,.tallf>img{width:100%;height:100%;object-fit:cover;display:block}
+.tallf{position:relative;aspect-ratio:4/5;border-radius:var(--r-badge);overflow:hidden;border:1.5px solid var(--line)}
+.player{position:absolute;left:14px;right:14px;bottom:18px;background:rgba(15,10,7,.82);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px;direction:rtl}
+.player .pl{width:36px;height:36px;border-radius:50%;background:var(--saffron);display:grid;place-items:center;flex:none}
+.player .pl svg{width:14px;height:14px;fill:var(--on-saffron)}
+.player .pt{flex:1;min-width:0;font-family:var(--f-tar);font-weight:700;font-size:14px;line-height:1.3}
+.player .pt small{display:block;font-family:var(--f-en);font-weight:400;color:var(--muted);font-size:11px;letter-spacing:.1em;direction:ltr;text-align:right}
+.eq{display:flex;gap:3px;align-items:center;height:28px}
+.eq b{width:3px;border-radius:2px;background:var(--saffron);height:calc(var(--h)*.28px);animation:eq 1.1s ease-in-out infinite alternate}
+.eq b:nth-child(3n){animation-delay:-.4s}.eq b:nth-child(3n+1){animation-delay:-.7s}
+@keyframes eq{to{transform:scaleY(.35)}}
+.story-bars{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:4px}
+.story-bars i{flex:1;height:3px;border-radius:2px;background:rgba(242,234,223,.35)}
+.story-bars i:first-child{background:var(--ink)}
+.story-txt{position:absolute;left:0;right:0;bottom:0;padding:90px 20px 26px;background:linear-gradient(0deg,rgba(15,10,7,.92),rgba(15,10,7,0));text-align:center;direction:rtl}
+.story-txt .k{font-family:var(--f-tar);font-weight:500;color:var(--ink);font-size:15px}
+.story-txt h4{margin:2px 0 6px;font-family:var(--f-dar);font-weight:800;font-size:clamp(24px,2.6vw,32px);color:var(--saffron);line-height:1.3}
+.soon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(15,10,7,.45);text-align:center}
+.soon h4{margin:0;font-family:var(--f-dar);font-weight:800;font-size:clamp(34px,4vw,52px);line-height:1.3}
+.soon .cd{font-family:var(--f-en);font-weight:700;font-size:clamp(22px,2.6vw,32px);letter-spacing:.08em;color:var(--saffron);direction:ltr}
+.hudc i{position:absolute;width:24px;height:24px;border:0 solid rgba(242,234,223,.7)}
+.hudc .a{top:14px;left:14px;border-top-width:2px;border-left-width:2px}.hudc .b{top:14px;right:14px;border-top-width:2px;border-right-width:2px}
+.hudc .c{bottom:14px;left:14px;border-bottom-width:2px;border-left-width:2px}.hudc .d{bottom:14px;right:14px;border-bottom-width:2px;border-right-width:2px}
+.reelstrip{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;direction:ltr}
+.reelstrip img{height:clamp(220px,26vw,320px);aspect-ratio:9/16;object-fit:cover;border-radius:18px;border:1.5px solid var(--line);scroll-snap-align:start;flex:none}
+.stripbox{grid-column:1/-1;display:flex;flex-direction:column;min-width:0}
+@media (max-width:900px){.w1,.w2,.w3{grid-column:span 6}.w3{grid-column:1/-1;max-width:420px;justify-self:center;width:100%}.w4,.w5{grid-column:1/-1}}
+@media (max-width:560px){.w1,.w2{grid-column:1/-1;max-width:380px;width:100%;justify-self:center}}
+.float-post{position:absolute;width:44%;aspect-ratio:1;border-radius:20px;overflow:hidden;border:1.5px solid var(--saffron);box-shadow:0 20px 50px rgba(0,0,0,.6),var(--glow);bottom:8%;right:-26%;z-index:2}
+.float-post img{width:100%;height:100%;object-fit:cover;display:block}
+.float-chip{position:absolute;top:10%;left:-24%;z-index:2;background:rgba(15,10,7,.9);border:1px solid var(--line);border-radius:16px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 20px 50px rgba(0,0,0,.6);direction:rtl}
+.float-chip span{font-family:var(--f-tar);font-weight:700;font-size:13px;white-space:nowrap}
+@media (max-width:860px){.float-post{right:-8%;width:40%}.float-chip{left:-6%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.lyric{position:absolute;inset:auto 10px 12px 10px;padding:14px 14px 12px;border-radius:14px;background:rgba(15,10,7,.78);backdrop-filter:blur(6px);border:1px solid rgba(232,145,45,.45);text-align:right}
+.lyric .lk{font:600 11px/1 'Space Grotesk',sans-serif;letter-spacing:.08em;color:var(--saffron,#E8912D)}
+.lyric p{margin:8px 0 0;font:700 17px/1.45 'Alexandria',sans-serif;color:#F2EADF}
+.lyric p.dim{font-weight:500;font-size:14px;color:#A89886}
+.lyric .lsoon{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:28px;background:#E8912D;color:#0F0A07;font:700 11px/1.4 'Tajawal',sans-serif}
+</style>
+</head>
+<body>
+<div dir="rtl" lang="ar">
+<header class="top">
+<div class="wrap">
+<a class="top-logo" href="#top" aria-label="Café ID Studio"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="height:46px;width:auto" viewBox="0 0 600 300" width="600" height="300"><path d="M73.8 252.1Q54.3 252.1 42.9 241.2Q31.5 230.3 31.5 210.1V184.9Q31.5 164.7 42.9 153.8Q54.3 142.9 73.8 142.9Q93.1 142.9 103.7 153.5Q114.3 164.1 114.3 182.5V183.4H94.8V181.9Q94.8 172.6 89.6 166.6Q84.4 160.6 73.8 160.6Q63.3 160.6 57.3 167.1Q51.3 173.5 51.3 184.6V210.4Q51.3 221.3 57.3 227.9Q63.3 234.4 73.8 234.4Q84.4 234.4 89.6 228.3Q94.8 222.2 94.8 213.1V210.4H114.3V212.5Q114.3 230.9 103.7 241.5Q93.1 252.1 73.8 252.1Z M151.2 252.1Q143.2 252.1 136.9 249.3Q130.7 246.6 127 241.2Q123.3 235.9 123.3 228.2Q123.3 220.6 127 215.4Q130.7 210.2 137.2 207.6Q143.7 205.0 152.1 205.0H172.5V200.8Q172.5 195.6 169.2 192.2Q165.9 188.8 158.7 188.8Q151.6 188.8 148.2 192Q144.8 195.2 143.7 200.3L126.3 194.5Q128.1 188.8 132.1 184.1Q136 179.4 142.7 176.4Q149.4 173.5 159.0 173.5Q173.7 173.5 182.2 180.8Q190.8 188.2 190.8 202.2V229.9Q190.8 234.4 195.0 234.4H201.0V250.0H188.4Q182.8 250.0 179.2 247.3Q175.6 244.6 175.6 240.1V239.9H172.8Q172.2 241.8 170.1 244.7Q168.0 247.6 163.5 249.8Q159.0 252.1 151.2 252.1ZM154.5 236.8Q162.4 236.8 167.5 232.4Q172.5 227.9 172.5 220.6V219.1H153.4Q148.2 219.1 145.2 221.3Q142.2 223.6 142.2 227.7Q142.2 231.7 145.3 234.2Q148.5 236.8 154.5 236.8Z M224.1 250.0V191.2H205.2V175.6H224.1V161.8Q224.1 154.2 228.7 149.6Q233.2 145.0 240.6 145.0H260.1V160.6H247.2Q243.0 160.6 243.0 165.1V175.6H262.5V191.2H243.0V250.0Z M308.1 252.1Q297.0 252.1 288.5 247.4Q280.1 242.7 275.3 234Q270.6 225.4 270.6 213.7V211.9Q270.6 200.2 275.2 191.6Q279.9 182.9 288.3 178.2Q296.7 173.5 307.8 173.5Q318.8 173.5 326.9 178.4Q334.9 183.2 339.4 191.9Q343.9 200.5 343.9 211.9V218.3H289.8Q290.1 226.0 295.5 230.8Q300.9 235.6 308.7 235.6Q316.6 235.6 320.4 232.1Q324.1 228.7 326.1 224.5L341.5 232.6Q339.4 236.5 335.5 241.1Q331.5 245.7 324.9 248.9Q318.3 252.1 308.1 252.1ZM289.9 204.2H324.8Q324.1 197.8 319.6 193.9Q315.0 190.0 307.6 190.0Q300.0 190.0 295.5 193.9Q291.0 197.8 289.9 204.2ZM296.4 167.2 307.5 145.0H328.8L312.9 167.2Z" fill="#F2EADF"/><path d="M436.2 96.0 C421.2 75.0 451.2 60.0 436.2 39.0 S422.8 6.0 437.8 -9.0" fill="none" stroke="#F2EADF" stroke-width="7.0" stroke-linecap="round"/><path d="M476.2 96.0 C461.2 75.0 491.2 60.0 476.2 39.0 S462.8 6.0 477.8 -9.0" fill="none" stroke="#F2EADF" stroke-width="7.0" stroke-linecap="round"/><path d="M516.2 96.0 C501.2 75.0 531.2 60.0 516.2 39.0 S502.8 6.0 517.8 -9.0" fill="none" stroke="#F2EADF" stroke-width="7.0" stroke-linecap="round"/><rect x="376.2" y="114.0" width="200.0" height="150.0" rx="22.5" fill="none" stroke="#E8912D" stroke-width="7.0"/><rect x="454.2" y="124.5" width="44.0" height="10.5" rx="5.3" fill="none" stroke="#E8912D" stroke-width="4.9"/><path d="M426.8 244.5V154.2H443.8V244.5Z M454.3 244.5V229.5H466.1V169.2H454.3V154.2H491.4Q509.6 154.2 519.1 163.4Q528.6 172.6 528.6 190.8V207.9Q528.6 226.1 519.1 235.3Q509.6 244.5 491.4 244.5ZM483.2 229H491.7Q502 229 506.8 223.6Q511.5 218.2 511.5 208.4V190.3Q511.5 180.4 506.8 175Q502 169.7 491.7 169.7H483.2Z" fill="#F2EADF"/></svg></a>
+<nav aria-label="الأقسام"><a href="#difference">الفرق</a><a href="#work">شغلنا</a><a href="#services">الخدمات</a><a href="#packages">الباقات</a><a href="#faq">أسئلة</a></nav>
+<a class="btn btn-primary wa" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>راسلنا</a>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="wrap">
+<div class="hero-copy">
+<span class="label">Café ID Studio · Sound · Image · Motion</span>
+<h1>هويتك لها طعم…<span class="l2">خلّه ينشاف</span></h1>
+<p class="lead">نصنع لمقهاك صوتاً وصورة وحركة: أغنية باسم مقهاك، ريلز وموشن، ومنيو يحكي. تبعث لنا صور جوالك، ونسلّمك محتوى جاهز للنشر.</p>
+<div class="hero-ctas">
+<a class="btn btn-primary wa" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>راسلنا واتساب</a>
+<a class="btn" href="#packages">شوف الباقات</a>
+</div>
+<div class="hero-meta"><span class="label">Delivery in 48h</span><span class="label">Berlin · Riyadh</span></div>
+</div>
+<div style="position:relative;justify-self:center">
+<div class="hud" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+<div class="phone">
+<video id="reel" src="media/cafeid-intro.mp4" poster="media/cafeid-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="فيديو تعريفي لكافيه آي دي ستوديو"></video>
+<button class="sound" id="snd" type="button">🔊 شغّل الصوت</button>
+</div>
+<div class="label" style="text-align:center;margin-top:30px">REC<span class="rec"></span>&nbsp; Reel 01</div>
+</div>
+</div>
+</section>
+<section class="diff" id="difference">
+<div class="wrap">
+<div class="sec-head" style="margin:0"><span class="label">Before · After</span><h2>نفس القهوة… <span class="accent">الفرق</span> في الهوية</h2><p class="lead">آلاف المقاهي تنزّل صور جوال عادية. اسحب الخط وشوف وش نسوي بنفس المشروب.</p></div>
+<div class="ba-row">
+<div class="ba" id="ba">
+<img src="img/before.jpg" alt="صورة جوال عادية للاتيه إسباني قبل التعديل">
+<img class="after" src="img/after.jpg" alt="نفس اللاتيه بعد تحويله لصورة إعلانية">
+<span class="bar"></span><span class="knob">⇆</span>
+<span class="tagl">قبل</span><span class="tagr">بعد</span>
+<input type="range" min="0" max="100" value="50" aria-label="قارن قبل وبعد">
+</div>
+<div class="ba-copy">
+<span class="label">Image · 48h</span>
+<h3>من صورة جوال… لصورة إعلان</h3>
+<ul>
+<li><b>Before</b><span>إضاءة سقف، طاولة مليانة مناديل، كوب بلاستيك.</span></li>
+<li><b>After</b><span>خلفية نظيفة، إضاءة زعفران، تفاصيل تخلّي الواحد يطلب.</span></li>
+<li><b>You send</b><span>صورة الجوال بس. الباقي علينا.</span></li>
+</ul>
+<a class="btn btn-primary wa" href="#contact" data-msg="أبغى أجرب صورة قبل/بعد لمشروبي" style="align-self:flex-start">جرّبها على مشروبك</a>
+</div>
+</div>
+<div class="grids">
+<div>
+<div class="gphone g-before" aria-label="حساب مقهى قبل">
+<div class="ghead"><span class="av">☕</span><div class="gname">حساب مقهى عادي<small>صور جوال، بدون هوية</small></div></div>
+<div class="ggrid">
+<div><img src="img/before.jpg" alt="" style="object-position:30% 40%"></div><div><img src="img/before.jpg" alt="" style="object-position:80% 20%;transform:scale(1.6)"></div><div><img src="img/before.jpg" alt=""></div>
+<div><img src="img/before.jpg" alt="" style="transform:scale(2.2);object-position:60% 80%"></div><div><img src="img/before.jpg" alt="" style="transform:scale(1.3) rotate(4deg)"></div><div><img src="img/before.jpg" alt="" style="transform:scale(1.8);object-position:10% 60%"></div>
+<div><img src="img/before.jpg" alt="" style="transform:scale(1.5) rotate(-3deg)"></div><div><img src="img/before.jpg" alt="" style="transform:scale(2.6);object-position:90% 90%"></div><div><img src="img/before.jpg" alt="" style="transform:scale(1.2)"></div>
+</div>
+</div>
+<div class="g-label">قبل</div>
+</div>
+<div class="arrow" aria-hidden="true">←</div>
+<div>
+<div class="gphone g-after" aria-label="نفس الحساب بعد كافيه آي دي">
+<div class="ghead"><span class="av">ID</span><div class="gname">نفس المقهى، بهوية<small>صوت · صورة · حركة</small></div></div>
+<div class="ggrid">
+<div><img src="img/after.jpg" alt=""></div>
+<div class="t-type sf">هويتك لها طعم… خلّه ينشاف</div>
+<div><img src="img/miniature.jpg" alt=""></div>
+<div><img src="media/frames/f21.9.jpg" alt="" style="object-position:50% 60%"></div>
+<div><img src="img/saffron.jpg" alt=""></div>
+<div class="t-type">خلّ لقهوتك صوت ينسمع<span class="mini-wave"><b style="--h:30"></b><b style="--h:70"></b><b style="--h:45"></b><b style="--h:95"></b><b style="--h:55"></b><b style="--h:80"></b><b style="--h:40"></b></span></div>
+<div><img src="img/interior-sq.jpg" alt=""></div>
+<div><img src="img/espresso-sq.jpg" alt=""></div>
+<div><img src="img/qr-menu.jpg" alt=""></div>
+</div>
+</div>
+<div class="g-label hot">بعد Café ID</div>
+</div>
+</div>
+</div>
+</section>
+<section id="work">
+<div class="wrap">
+<div class="sec-head"><span class="label">Selected work · Concept</span><h2>نماذج من شغلنا</h2><p class="lead">كل نموذج هنا خدمة تقدر تطلبها. النماذج مشاريع مفاهيمية لمقاهٍ غير حقيقية، عشان تشوف الستايل.</p></div>
+<div class="work-grid">
+<div class="w w1">
+<div class="phonef"><img src="img/espresso-reel.jpg" alt="كليب أغنية مقهى سَنا">
+<div class="lyric" aria-hidden="true"><span class="lk">♪ سَنا · Concept</span><p>قل لي وش تبي؟<br>سَنا عندها الجواب</p><p class="dim">سبانش، موكا، V60…<br>كل كوب له حساب</p><span class="lsoon">الكليب قريباً</span></div>
+</div>
+<div class="frame-tag"><strong>أغنية مقهاك</strong><span class="concept">Concept</span></div>
+<p class="wdesc">أغنية كاملة كلماتها من قصة مقهاك، بصوت خليجي، مع كليب يصير توقيعك بكل ريلز وستوري. النموذج لمقهى «سَنا» المفاهيمي.</p>
+</div>
+<div class="w w2">
+<div class="phonef"><img src="img/saffron-story.jpg" alt="ستوري قصة لاتيه الزعفران">
+<div class="story-bars"><i></i><i></i><i></i></div>
+<div class="story-txt"><div class="k">حكاية</div><h4>لاتيه الزعفران</h4><span class="label">Drink legend · 01</span></div>
+</div>
+<div class="frame-tag"><strong>أسطورة المشروب</strong><span class="concept">Concept</span></div>
+<p class="wdesc">قصة متحركة قصيرة لأشهر مشروب عندك، تخلّي الناس تطلبه بالاسم.</p>
+</div>
+<div class="w w3">
+<div class="phonef"><img src="img/qr-menu.jpg" alt="المنيو الناطق على الجوال" style="object-position:60% 50%"></div>
+<div class="frame-tag"><strong>المنيو الناطق</strong><span class="concept">Concept</span></div>
+<p class="wdesc">QR على الطاولة يفتح فيديو قصير لكل مشروب، بالعربي والإنجليزي.</p>
+</div>
+<div class="w w4">
+<div class="postf"><img src="img/miniature.jpg" alt="مجسّم مصغّر لمقهى"></div>
+<div class="frame-tag"><strong>الكافيه المصغّر</strong><span class="concept">Concept</span></div>
+<p class="wdesc">مجسّم صغير لمقهاك من صورة الواجهة، صورة وفيديو يوقفان السكرول.</p>
+</div>
+<div class="w w5">
+<div class="postf" style="aspect-ratio:7/5"><img src="img/interior-sq.jpg" alt="إعلان افتتاح مقهى" style="object-position:50% 40%">
+<div class="soon"><span class="label" style="color:var(--ink)">Grand opening</span><h4>قريباً</h4><div class="cd">03 : 14 : 22</div></div>
+<div class="hudc" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+</div>
+<div class="frame-tag"><strong>باقة الافتتاح</strong><span class="concept">Concept</span></div>
+<p class="wdesc">تشويق وعدّ تنازلي قبل ما تفتح، ومحتوى جاهز ليوم الافتتاح.</p>
+</div>
+<div class="stripbox">
+<div class="reelstrip" aria-label="لقطات من فيديو موشن">
+<img src="media/frames/f2.7.jpg" alt=""><img src="media/frames/f4.4.jpg" alt=""><img src="media/frames/f7.8.jpg" alt=""><img src="media/frames/f10.6.jpg" alt=""><img src="media/frames/f12.4.jpg" alt=""><img src="media/frames/f14.0.jpg" alt=""><img src="media/frames/f15.6.jpg" alt=""><img src="media/frames/f21.9.jpg" alt="">
+</div>
+<div class="frame-tag"><strong>فيديو موشن</strong><span class="concept">Café ID · Reel 01</span></div>
+<p class="wdesc">كلمات وأرقام تتحرك على الإيقاع، بدون ما تحتاج تصوير.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="services">
+<div class="wrap">
+<div class="sec-head rv"><span class="label">What we make</span><h2>صوت · صورة · حركة</h2><p class="lead">كل شي نسلّمه جاهز للنشر على إنستغرام وسناب وتيك توك، بمقاس 9:16 وكابشن مكتوب.</p></div>
+<div class="pillars">
+<article class="pillar rv">
+<span class="label">Sound</span><h3>صوت</h3>
+<div class="motif wave" aria-hidden="true"><b style="height:14px"></b><b style="height:26px"></b><b style="height:40px"></b><b style="height:52px"></b><b style="height:30px"></b><b style="height:58px"></b><b style="height:44px"></b><b style="height:62px"></b><b style="height:34px"></b><b style="height:50px"></b><b style="height:24px"></b><b style="height:40px"></b><b style="height:56px"></b><b style="height:30px"></b><b style="height:18px"></b><b style="height:44px"></b><b style="height:26px"></b><b style="height:14px"></b></div>
+<div class="svc">
+<div><strong>أغنية مقهاك</strong><span>2499 ر.س</span></div>
+<p>نسمع قصة مقهاك، نكتب الكلمات، نلحّن ونسجّل بصوت خليجي، ونصوّر كليب 9:16. تستلم الأغنية كاملة، ونسخة 30 ثانية، وتوقيع 5 ثواني، والكلمات مكتوبة.</p>
+<div><strong>المنيو الناطق</strong><span>1499 ر.س</span></div>
+<p>QR على الطاولة، وكل مشروب يعرّف عن نفسه بفيديو قصير بالعربي والإنجليزي.</p>
+</div>
+</article>
+<article class="pillar rv">
+<span class="label">Image</span><h3>صورة</h3>
+<div class="motif" aria-hidden="true"><svg width="120" height="64" viewBox="0 0 120 64" fill="none" stroke="#D9A866" stroke-width="3" stroke-linecap="round"><path d="M4 18V4h14M102 4h14v14M116 46v14h-14M18 60H4V46"/><path d="M42 26h36l-5 22q-13 6-26 0z"/><path d="M79 31a7 7 0 010 12"/><path d="M52 20q-4-5 0-10M60 20q-4-5 0-10M68 20q-4-5 0-10"/></svg></div>
+<div class="svc">
+<div><strong>الكافيه المصغّر</strong><span>399 ر.س</span></div>
+<p>نسخة مجسّمة صغيرة من مقهاك، صورة وفيديو يلفت النظر من أول ثانية.</p>
+<div><strong>أسطورة المشروب</strong><span>699 ر.س</span></div>
+<p>قصة متحركة لأشهر مشروب عندك، تخلّي الناس تطلبه بالاسم.</p>
+</div>
+</article>
+<article class="pillar rv">
+<span class="label">Motion</span><h3>حركة</h3>
+<div class="motif" aria-hidden="true"><svg width="120" height="64" viewBox="0 0 120 64" fill="none" stroke="#D9A866" stroke-width="3" stroke-linecap="round"><path d="M60 32m-3 0a3 3 0 106 0a8 8 0 10-16 0a14 14 0 1028 0a20 20 0 10-40 0a26 26 0 1052 0"/><path d="M2 20h22M8 32h14M2 44h20" opacity=".5"/></svg></div>
+<div class="svc">
+<div><strong>فيديو موشن</strong><span>999 ر.س</span></div>
+<p>فيديو 20–30 ثانية بنفس ستايل الفيديو اللي فوق: أرقام وكلمات تتحرك على الإيقاع.</p>
+<div><strong>منيو متحرك للشاشات</strong><span>799 ر.س</span></div>
+<p>منيو وأسعار تتحرك على تلفزيون المقهى.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="packages">
+<div class="wrap">
+<div class="sec-head"><span class="label">Packages</span><h2>اختر باقتك</h2><p class="lead">الأسعار بالريال السعودي. التزام ثلاثة أشهر بالباقة الشهرية = خصم 10%.</p></div>
+<div class="offer-strip"><span class="pct">-30%</span><span>لأول 5 مقاهي بس: خصم على أي باقة، مقابل رأيك وإذن نعرض شغلك.</span><a class="btn btn-primary wa" href="#contact" data-msg="أبغى خصم أول 5 مقاهي">احجز مكانك</a></div>
+<div class="tabs" role="tablist" aria-label="نوع الباقة">
+<button type="button" role="tab" id="t-m" aria-selected="true" aria-controls="p-m">شهرية</button>
+<button type="button" role="tab" id="t-o" aria-selected="false" aria-controls="p-o">مرة وحدة</button>
+</div>
+<div class="packs" id="p-m" role="tabpanel" aria-labelledby="t-m">
+<div class="pack"><h3>الأساسية</h3><div class="price">799 <small>ر.س / شهر</small></div>
+<ul><li>8 صور مشروبات احترافية</li><li>4 ريلز بتعليق صوتي سعودي</li><li>4 تصاميم ستوري</li></ul>
+<a class="btn wa" href="#contact" data-msg="أبغى الباقة الأساسية">اطلب الأساسية</a></div>
+<div class="pack feat"><span class="badge-top">Most chosen</span><h3>النمو</h3><div class="price">1299 <small>ر.س / شهر</small></div>
+<ul><li>12 صورة مشروبات احترافية</li><li>8 ريلز بتعليق صوتي سعودي</li><li>8 تصاميم ستوري</li><li>4 كاروسيل</li><li class="star">قطعة مميزة كل شهر من الست</li><li>كابشن جاهز ومحتوى المواسم</li></ul>
+<a class="btn btn-primary wa" href="#contact" data-msg="أبغى باقة النمو">اطلب النمو</a></div>
+<div class="pack"><h3>المميزة</h3><div class="price">1999 <small>ر.س / شهر</small></div>
+<ul><li>16 صورة مشروبات احترافية</li><li>12 ريلز بتعليق صوتي سعودي</li><li>12 تصميم ستوري</li><li>6 كاروسيل</li><li class="star">قطعتين مميزتين كل شهر من الست</li><li>تحديث المنيو الناطق والمتحرك</li><li class="star">توقيع صوتي من أغنية مقهاك مجاناً مع التزام 3 أشهر</li><li>كابشن جاهز ومحتوى المواسم</li></ul>
+<a class="btn wa" href="#contact" data-msg="أبغى الباقة المميزة">اطلب المميزة</a></div>
+</div>
+<div class="packs two" id="p-o" role="tabpanel" aria-labelledby="t-o" hidden>
+<div class="pack"><h3>باقة الافتتاح</h3><div class="price">2499 <small>ر.س</small></div>
+<ul><li class="star">الكافيه المصغّر</li><li class="star">فيديو موشن عدّ تنازلي للافتتاح</li><li class="star">منيو متحرك للشاشات</li><li>10 صور مشروبات</li><li>4 فيديوهات تشويق</li><li>6 تصاميم ستوري للافتتاح</li></ul>
+<a class="btn wa" href="#contact" data-msg="أبغى باقة الافتتاح">اطلب باقة الافتتاح</a></div>
+<div class="pack feat"><span class="badge-top">Full identity</span><h3>هوية الكافيه الكاملة</h3><div class="price">3999 <small>ر.س</small></div><span class="was">بدلاً من 6894 ر.س لو منفردة</span>
+<ul><li class="star">أغنية مقهاك مع الكليب</li><li class="star">المنيو الناطق</li><li class="star">الكافيه المصغّر</li><li class="star">أسطورة أشهر مشروب</li><li class="star">فيديو موشن تعريفي</li><li class="star">منيو متحرك للشاشات</li></ul>
+<a class="btn btn-primary wa" href="#contact" data-msg="أبغى باقة الهوية الكاملة">اطلب الهوية الكاملة</a></div>
+</div>
+<p class="star-note"><span class="st">★</span> من الخدمات المميزة الست: أغنية مقهاك، المنيو الناطق، الكافيه المصغّر، أسطورة المشروب، فيديو موشن، منيو متحرك.</p>
+<div class="terms"><span class="chip">تعديلين لكل عمل</span><span class="chip">تسليم على دفعتين بالشهر</span><span class="chip">النشر عليك، والإنتاج علينا</span><span class="chip">الدفع برابط آمن</span></div>
+</div>
+</section>
+<section id="how">
+<div class="wrap">
+<div class="sec-head"><span class="label">How it works · Berlin → Riyadh</span><h2>ثلاث خطوات، وأنت فاضي لمقهاك</h2></div>
+<div class="steps">
+<div class="step"><span class="n">01</span><h3>تبعث لنا صورك</h3><p>صور جوال للمقهى والمشروبات، والشعار والمنيو. بدون جلسة تصوير.</p></div>
+<div class="step"><span class="n">02</span><h3>نصنع الهوية</h3><p>ذوق أوروبي بلهجة سعودية. أول مسودة خلال 48 ساعة.</p></div>
+<div class="step hi"><span class="n">03</span><h3>تنشر وتشوف الفرق</h3><p>كل شي جاهز مع الكابشن، وتعديلين على كل عمل. النشر بيدك.</p></div>
+</div>
+</div>
+</section>
+<section class="faq" id="faq">
+<div class="wrap">
+<div class="sec-head"><span class="label">FAQ</span><h2>أسئلة تتكرر</h2></div>
+<details><summary>هل تنشرون على حساباتي؟</summary><p>لا. نسلّمك كل شي جاهز مع الكابشن، والنشر يكون من حسابك وبيدك.</p></details>
+<details><summary>لو ما أحب الموسيقى في الإعلان؟</summary><p>نسوي أغنيتك شيلة بدون آلات، أو نكتفي بصوت راوي. كل شي يتفصّل على ذوقك.</p></details>
+<details><summary>أقدر أشوف عينة قبل ما أدفع؟</summary><p>أكيد. راسلنا بصورة من مقهاك، ونسوي لك عينة مجانية قصيرة. الدفع بعدها برابط آمن.</p></details>
+</div>
+</section>
+<section class="final" id="contact">
+<div class="wrap">
+<span class="label">Let it be seen</span>
+<h2>خلّ لقهوتك <span class="accent">صوت</span> ينسمع</h2>
+<p class="lead">راسلنا بصورة واحدة من مقهاك، ونرسل لك عينة مجانية.</p>
+<div class="contact">
+<a class="btn btn-primary wa" href="#contact" data-msg="أبغى عينة مجانية لمقهاي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>راسلنا واتساب</a>
+<span class="num" id="num"></span>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><span>Café ID Studio · كافيه آي دي ستوديو</span><span class="en">Berlin · Riyadh</span></div></footer>
+</div>
+<script>
+// ضع رقم الواتساب هنا بالصيغة الدولية بدون + أو أصفار، مثال: 4915123456789
+const WHATSAPP = "";
+document.documentElement.classList.add('js');
+const base = "مرحبا، شفت صفحة كافيه آي دي ستوديو";
+document.querySelectorAll('.wa').forEach(a=>{
+if(!WHATSAPP) return;
+const msg = base + (a.dataset.msg ? " — " + a.dataset.msg : "");
+a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+a.target = "_blank"; a.rel = "noopener";
+});
+const num=document.getElementById('num');
+num.textContent = WHATSAPP ? "+" + WHATSAPP : "رقم الواتساب قريباً";
+// before/after slider
+const ba=document.getElementById('ba'),bi=ba.querySelector('input');
+bi.addEventListener('input',()=>ba.style.setProperty('--p',bi.value+'%'));
+// tabs
+const tabs=[...document.querySelectorAll('.tabs button')];
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(t=>{const on=t===b;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on})}));
+// sound toggle
+const v=document.getElementById('reel'),snd=document.getElementById('snd');
+snd.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{})}snd.textContent=v.muted?'🔊 شغّل الصوت':'🔇 اكتم الصوت'});
+</script>
+</body>
+</html>
