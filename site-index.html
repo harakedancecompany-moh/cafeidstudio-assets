@@ -255,8 +255,11 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 .reelstrip img{height:clamp(220px,26vw,320px);aspect-ratio:9/16;object-fit:cover;border-radius:18px;border:1.5px solid var(--line);scroll-snap-align:start;flex:none}
 .stripbox{grid-column:1/-1;display:flex;flex-direction:column;min-width:0}
 .vidbox{flex-direction:row;align-items:center;gap:clamp(24px,5vw,56px);border:1px solid var(--line);border-radius:var(--r-badge);background:var(--raised);padding:clamp(18px,3vw,32px)}
-.vphone{flex:none;width:min(300px,100%);aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:1.5px solid var(--saffron);box-shadow:var(--glow);background:#000}
+.vphone{position:relative;flex:none;width:min(300px,100%);aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:1.5px solid var(--saffron);box-shadow:var(--glow);background:#000}
 .vphone video{width:100%;height:100%;object-fit:cover;display:block}
+.vidbox{justify-content:center}
+.phonef video{width:100%;height:100%;object-fit:cover;display:block}
+.vsnd{position:absolute;bottom:14px;inset-inline-start:14px;z-index:3;font-family:var(--f-tar);font-size:13px;font-weight:700;background:rgba(15,10,7,.75);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 12px;cursor:pointer}
 .vcopy{display:flex;flex-direction:column;gap:12px;min-width:0}
 .vcopy h3{font-size:clamp(26px,3.4vw,38px);font-weight:800}
 @media (max-width:700px){.vidbox{flex-direction:column}.vphone{width:min(300px,86vw)}}
@@ -367,9 +370,7 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <div class="sec-head"><span class="label">Selected work · Concept</span><h2>نماذج من شغلنا</h2><p class="lead">كل نموذج هنا خدمة تقدر تطلبها. النماذج مشاريع مفاهيمية لمقاهٍ غير حقيقية، عشان تشوف الستايل.</p></div>
 <div class="work-grid">
 <div class="w w1">
-<div class="phonef"><img src="img/espresso-reel.jpg" alt="كليب أغنية مقهى سَنا">
-<div class="lyric" aria-hidden="true"><span class="lk">♪ سَنا · Concept</span><p>قل لي وش تبي؟<br>سَنا عندها الجواب</p><p class="dim">سبانش، موكا، V60…<br>كل كوب له حساب</p><span class="lsoon">الكليب قريباً</span></div>
-</div>
+<div class="phonef"><video class="autov" src="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/sana-clip.mp4" poster="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/sana-clip-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="كليب أغنية مقهى سَنا"></video><button class="vsnd" type="button">🔊 شغّل الصوت</button></div>
 <div class="frame-tag"><strong>أغنية وكليب مقهاك</strong><span class="concept">Concept</span></div>
 <p class="wdesc">أغنية أصلية باسم مقهاك مع فيديو كليب احترافي: قصة، تصوير سينمائي، ومونتاج على الإيقاع. يصير توقيعك بكل ريلز وستوري. النموذج لمقهى «سَنا» المفاهيمي.</p>
 </div>
@@ -400,12 +401,7 @@ button.player:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 <p class="wdesc">تشويق وعدّ تنازلي قبل ما تفتح، ومحتوى جاهز ليوم الافتتاح.</p>
 </div>
 <div class="stripbox vidbox">
-<div class="vphone"><video id="whyv" src="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/why-marketing.mp4" poster="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/why-marketing-poster.jpg" controls playsinline preload="none" aria-label="فيديو ستوب موشن: ليش المقهى لازم يسوّق؟"></video></div>
-<div class="vcopy">
-<span class="label">Stop-motion · Café ID</span>
-<h3>ليش المقهى لازم يسوّق؟</h3>
-<p class="wdesc">فيديو ستوب موشن تعريفي بقصاصات ورق، بتعليق صوتي سعودي وموسيقى وكلام مكتوب على الشاشة. نفس الأسلوب نسويه لمقهاك: يشرح قصتك وخدماتك بـ 30 إلى 50 ثانية.</p>
-<div class="frame-tag" style="justify-content:flex-start;gap:12px"><strong>فيديو ستوب موشن</strong><span class="concept">Café ID · Reel 02</span></div>
+<div class="vphone"><video class="autov" id="whyv" src="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/why-marketing.mp4" poster="https://cdn.jsdelivr.net/gh/harakedancecompany-moh/cafeidstudio-assets@main/media/why-marketing-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="فيديو ستوب موشن عن التسويق"></video><button class="vsnd" type="button">🔊 شغّل الصوت</button></div>
 </div>
 </div>
 </div>
@@ -538,7 +534,9 @@ const tabs=[...document.querySelectorAll('.tabs button')];
 tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(t=>{const on=t===b;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on})}));
 // sound toggle
 const v=document.getElementById('reel'),snd=document.getElementById('snd');
-snd.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{})}snd.textContent=v.muted?'🔊 شغّل الصوت':'🔇 اكتم الصوت'});
+snd.addEventListener('click',()=>{if(v.muted){document.querySelectorAll('.autov').forEach(x=>x.muted=true);document.querySelectorAll('.vsnd').forEach(o=>o.textContent='🔊 شغّل الصوت')}v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{})}snd.textContent=v.muted?'🔊 شغّل الصوت':'🔇 اكتم الصوت'});
+const allv=[document.getElementById('reel'),...document.querySelectorAll('.autov')];
+document.querySelectorAll('.vsnd').forEach(b=>{const vv=b.parentElement.querySelector('video');b.addEventListener('click',()=>{const on=vv.muted;allv.forEach(x=>{if(x!==vv&&!x.muted){x.muted=true}});document.querySelectorAll('.vsnd').forEach(o=>o.textContent='🔊 شغّل الصوت');snd.textContent='🔊 شغّل الصوت';vv.muted=!on;if(on){vv.currentTime=0;vv.play().catch(()=>{});b.textContent='🔇 اكتم الصوت'}})});
 </script>
 </body>
 </html>
